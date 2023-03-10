@@ -1,0 +1,134 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<!-- Hero -->
+<div id="hero" class="bg-[#060E70] w-full flex justify-center">
+  <div class="w-full lg:w-[1400px] h-full">
+    <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 h-full">
+      <div class="text-white font-bebas lg:col-span-2 flex justify-center">
+        <div class="inline-block py-[128px] lg:py-[256px] text-[0px]">
+          <p class="text-[64px] text-left leading-none pl-[5px]">WATCH</p>
+          <p class="text-[192px] leading-none -mb-8 -mt-4">QUIN</p>
+          <p
+            class="text-[64px] leading-none flex items-center justify-end pr-[5px]"
+          >
+            <a href="#" class="hover:text-[#424CBD]">
+              <i class="fa-brands fa-twitch text-5xl pr-[16px]"></i>LIVE
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="relative md:h-full lg:col-span-3">
+        <img
+          class="sm:absolute bottom-0 w-full"
+          src="{% static '/images/Stare.png' %}"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- News -->
+<div id="news" class="text-[#1C1D21] w-full flex justify-center">
+  <div class="w-[1400px] mt-16 px-16">
+    <h1 class="font-bebas text-[64px] pb-16">News</h1>
+    <div class="">
+      {% for article in news %}
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 pb-16">
+        <div>
+          <img class="" src="{{ article.image }}" alt="image description" />
+        </div>
+        <div>
+          <h3 class="font-bebas text-[32px] pb-[16px]">{{ article.title }}</h3>
+          <p class="font-mont font-light pb-[32px]">{{ article.date }}</p>
+          <p class="font-mont">{{ article.content }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Highlights -->
+<div id="youtube" class="bg-[#1C1D21] text-white w-full flex justify-center">
+  <div class="w-[1400px] mt-16 px-16">
+    <h1 class="font-bebas text-[64px] pb-16">Latest Highlights</h1>
+    <div class="">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 pb-16">
+        <div class="relative w-full h-0 pb-[56.25%]">
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed?listType=user_uploads&list=xQuinmasterx&index=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+        <div class="relative w-full h-0 pb-[56.25%]">
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed?listType=user_uploads&list=xQuinmasterx&index=2"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 pb-16">
+        <div class="relative w-full h-0 pb-[56.25%]">
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed?listType=user_uploads&list=xQuinmasterx&index=3"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+        <div class="relative w-full h-0 pb-[56.25%]">
+          <iframe
+            class="w-full aspect-video rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed?listType=user_uploads&list=xQuinmasterx&index=4"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<div id="contact" class="text-[#1C1D21] w-full flex justify-center">
+  <div class="w-[1400px] mt-16 px-16">
+    <h1 class="font-bebas text-[64px] pb-16">Contact</h1>
+    <div class="">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 pb-16">
+        <div>
+          <h3 class="font-bebas text-[32px] pb-8">Send Me Mail!</h3>
+          <p class="font-mont font-bold pb-8">PO Box Address</p>
+          <p class="font-mont">
+            Quintin Crawford<br />
+            PO Box 881<br />
+            Wanganui PostShop<br />
+            Wanganui 4500<br />
+            New Zealand<br />
+          </p>
+        </div>
+        <div>
+          <h3 class="font-bebas text-[32px] pb-[32px]">Business</h3>
+          <p class="font-mont pb-[32px]">
+            For everything business related contact me at
+            <span class="font-bold">business@quin69.com</span>
+          </p>
+          <p class="font-mont">
+            Other than this, the best place to reach me would be via
+            <span class="font-bold">Twitter</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
